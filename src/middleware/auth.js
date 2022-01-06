@@ -6,7 +6,7 @@ const auth = async (req, res, next) => {
         const token = req.header('Authorization').replace('Bearer ', '')
         // console.log(token) 
         // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWQxYjdkNTRmNGZmYjJhYmNjYzRkMTciLCJpYXQiOjE2NDExMzg3NDUsImV4cCI6MTY0MTc0MzU0NX0.rp1eUgK5Sh5zZwn7xi83k1CQCm5MzDO3qSApUoJ6kBE
-        const decodedToken = jwt.verify(token, process.end.JWT_SECRET)
+        const decodedToken = jwt.verify(token, process.env.JWT_SECRET)
         // console.log(decodedToken) 
         // { _id: '61d1b7d54f4ffb2abccc4d17', iat: 1641138745, exp: 1641743545 }
 
